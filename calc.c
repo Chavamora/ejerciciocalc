@@ -20,6 +20,13 @@ int suma(int a, int b) {
 }
 
 int resta(int a, int b) {
+    int a,b,c;
+    printf("Ingresa el primer numero");
+    scanf("%d",&a);
+    printf("Ingresa el numero que resta ");
+    scanf("%d"&b);
+    c=a-b;
+    printf("El resultado de tu resta es: %d",c)
     return 1;
 }
 
