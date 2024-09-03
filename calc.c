@@ -24,7 +24,10 @@ int resta(int a, int b) {
 }
 
 int multi(int a, int b) {
-    return 1;
+    int resultado;
+    
+    resultado = a * b;
+    return resultado;
 }
 
 int div(int a, int b) {
