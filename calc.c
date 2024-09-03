@@ -28,5 +28,17 @@ int multi(int a, int b) {
 }
 
 int div(int a, int b) {
-    return 1;
+
+    float r;
+
+    if(b==0){
+
+        printf("La division no es valida");
+
+    }else{
+
+        r=a/b;
+    }
+    
+    return r;
 }
