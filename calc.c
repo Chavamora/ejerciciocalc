@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void menu();
-int suma(int,int);
+int suma(int,int, resultado);
 int resta(int,int);
 int multi(int, int);
 int div(int, int);
@@ -15,7 +15,13 @@ void menu() {
     printf("menu");
 }
 
-int suma(int a, int b) {
+int suma(int a, int b, resultado) {
+    printf("Introduce el primer numero: \n");
+    scanf("%f", &a);
+    printf("Introduce el segundo numero: \n");
+    scanf("%f", &b);
+    resultado = a + b;
+    printf("El resultado es %d\n", resultado);
     return 1;
 }
 
