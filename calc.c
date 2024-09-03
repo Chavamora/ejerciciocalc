@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 void menu();
-int suma(int,int, resultado);
+int suma(int,int);
 int resta(int,int);
 int multi(int, int);
-int div(int, int);
+float div(int, int);
+float modulo(int, int);
 
 int main() {
 menu();
@@ -12,7 +13,7 @@ return 0;
 }
 
 void menu() {
-    printf("Escoge la operacion 1=resta, 2=suma, 3=multiplicaion, 4=division, 5=modulo");
+    printf("Escoge la operacion 1=suma, 2=resta, 3=multiplicaion, 4=division, 5=modulo");
     int opcion = 0;
     scanf("%d", &opcion);
     printf("ingresa el primer numero: ");
@@ -38,30 +39,22 @@ void menu() {
             modulo(a,b);
         break;
         default:
-            printf("opcion invalida);
+            printf("opcion invalida");
         break;
     }
     
 }
 
-int suma(int a, int b, resultado) {
-    printf("Introduce el primer numero: \n");
-    scanf("%d", &a);
-    printf("Introduce el segundo numero: \n");
-    scanf("%d", &b);
-    resultado = a + b;
+int suma(int a, int b) {
+    int resultado = a + b;
     printf("El resultado es %d\n", resultado);
     return 1;
 }
 
 int resta(int a, int b) {
-    int a,b,c;
-    printf("Ingresa el primer numero");
-    scanf("%d",&a);
-    printf("Ingresa el numero que resta ");
-    scanf("%d"&b);
+    int c = 0;
     c=a-b;
-    printf("El resultado de tu resta es: %d",c)
+    printf("El resultado de tu resta es: %d",c);
     return 1;
 }
 
@@ -69,10 +62,12 @@ int multi(int a, int b) {
     int resultado;
     
     resultado = a * b;
-    return resultado;
+    printf("El resultado es: %d", resultado);
+    return 0;
 }
 
-int div(int a, int b) {
+
+float div(int a, int b) {
 
     float r;
 
@@ -84,7 +79,7 @@ int div(int a, int b) {
 
         r=a/b;
     }
-    
+    printf("el resultado es: %f", r);
     return r;
 }
 
@@ -93,5 +88,6 @@ float modulo(int a, int b) {
         printf("la division no es valida");
         return 0;
     }
+    printf("el resultado es: %f", a%b);
     return a % b;
 }
