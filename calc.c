@@ -87,3 +87,11 @@ int div(int a, int b) {
     
     return r;
 }
+
+float modulo(int a, int b) {
+    if(b==0){
+        printf("la division no es valida");
+        return 0;
+    }
+    return a % b;
+}
