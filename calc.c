@@ -17,9 +17,9 @@ void menu() {
 
 int suma(int a, int b, resultado) {
     printf("Introduce el primer numero: \n");
-    scanf("%f", &a);
+    scanf("%d", &a);
     printf("Introduce el segundo numero: \n");
-    scanf("%f", &b);
+    scanf("%d", &b);
     resultado = a + b;
     printf("El resultado es %d\n", resultado);
     return 1;
